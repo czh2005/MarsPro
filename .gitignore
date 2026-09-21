@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *.log
 *.tmp
+*.aux
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
 .DS_Store
 Thumbs.db
 .idea/
