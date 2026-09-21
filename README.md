@@ -24,12 +24,19 @@ unknown cells are excluded from Masked-BCE loss and known-cell evaluation.
 
 ## Data
 
-- 40,000 protein sequences
+- 40,000 accession-first records in the public repository; the public split
+  tables do not contain raw sequence strings
 - 36,000 training, 2,000 validation, and 2,000 locked-test records
 - six multilabel stress categories with explicit unknown states
 - ID50 cluster-aware splitting with no registered ID50 cluster shared across
   the fixed splits
 - a 10,000-sequence structure-corpus index for MarsMPNN adaptation
+
+`stage1_prediction/data/public_accession_only/` contains the public split
+tables, sequence hashes, accessions, and retrieval fields. The complete
+sequence tables are preserved in the dated local release package under
+`full_training_tables/` for authorized internal training and are not uploaded
+to this public repository.
 
 PDB/CIF files and pretrained base-model weights are not included. Their
 expected identifiers, inputs, and reconstruction metadata are retained.
@@ -77,8 +84,10 @@ content retain their upstream terms; see `DATA_LICENSE.md` and
 `stage1_prediction/data/provenance/source_inventory_40k.csv`.
 
 The code, author-created metadata, protocols, and derived results are public.
-Sequence redistribution rights remain unverified for 11 of the 18 registered
+Sequence redistribution rights are not cleared uniformly across the 18 registered
 scientific sources, so this repository is not a blanket redistribution grant.
+The current source-by-source decision is in
+`docs/SEQUENCE_REDISTRIBUTION_AUDIT_20260922.md`.
 Users must consult
 `stage1_prediction/data/provenance/source_inventory_40k.csv` and the upstream
 terms before redistributing source-derived sequence content. The source-holdout

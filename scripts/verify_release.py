@@ -62,17 +62,19 @@ def verify_manifest() -> None:
 
 def verify_stage1() -> tuple[int, int]:
     data = ROOT / "stage1_prediction" / "data"
+    public_data = data / "public_accession_only"
     expected_rows = {"train.csv": 36000, "validation.csv": 2000, "test.csv": 2000}
     split_ids: set[str] = set()
     for name, expected in expected_rows.items():
-        rows = read_csv(data / name)
+        rows = read_csv(public_data / name)
+        require("sequence" not in rows[0], f"public accession-only table contains raw sequence: {name}")
         require(len(rows) == expected, f"row mismatch: {name}: {len(rows)} != {expected}")
         ids = {row["sequence_id"] for row in rows}
         require(len(ids) == expected, f"duplicate sequence_id in {name}")
         require(not split_ids.intersection(ids), f"sequence_id overlap involving {name}")
         split_ids.update(ids)
 
-    sidecar = read_csv(data / "metadata_sidecar_40k.csv")
+    sidecar = read_csv(public_data / "metadata_sidecar_40k.csv")
     require(len(sidecar) == 40000, "metadata sidecar row mismatch")
     require({row["sequence_id"] for row in sidecar} == split_ids, "sidecar sequence_id mismatch")
 
@@ -102,11 +104,15 @@ def verify_stage1() -> tuple[int, int]:
     inventory = read_csv(data / "provenance" / "source_inventory_40k.csv")
     require(len(inventory) == 18, "scientific source inventory count mismatch")
     require(all(row.get("license_public_redistribution_status", "").strip() for row in inventory), "blank redistribution status")
+    # A non-empty status is not the same as a clearance. Until a source has an
+    # explicit sequence-level clearance status, it remains conditional for a
+    # public FASTA release. The dated audit documents the reason per source.
+    cleared = {"confirmed_sequence_redistribution"}
     unresolved = sum(
-        row["license_public_redistribution_status"] == "not_verified_for_redistribution"
+        row["license_public_redistribution_status"] not in cleared
         for row in inventory
     )
-    require(unresolved == 11, "unexpected redistribution-audit count")
+    require(unresolved == 18, "unexpected redistribution-audit count")
     return len(split_ids), unresolved
 
 

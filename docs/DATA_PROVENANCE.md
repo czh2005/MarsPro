@@ -2,7 +2,12 @@
 
 ## Stage 1 resource
 
-The 40,000 records are released as fixed `train.csv`, `validation.csv`, and `test.csv` files. `metadata_sidecar_40k.csv` joins one-to-one by `sequence_id` and records sequence hashes, ID50 clusters, source identifiers, taxonomy, relationship components, Pfam fields, and evidence-layer fields.
+The public repository exposes the 40,000 records as fixed accession-first
+`train.csv`, `validation.csv`, and `test.csv` files under
+`stage1_prediction/data/public_accession_only/`. These tables omit raw sequence
+strings and retain sequence hashes, accessions, labels, splits, and retrieval
+fields. The complete sequence tables are preserved in the dated local release
+package under `full_training_tables/` for authorized internal training.
 
 The release also includes:
 
@@ -18,4 +23,4 @@ The release also includes:
 
 ## License status
 
-The release distinguishes auditability from redistribution permission. Empty historical license fields are normalized to `not_verified_for_redistribution` in the public source inventory. This status does not invalidate the scientific provenance, but it must be resolved before unrestricted redistribution of affected third-party sequence collections.
+The release distinguishes auditability from redistribution permission. Empty historical license fields are normalized to `not_verified_for_redistribution` in the public source inventory. This status does not invalidate the scientific provenance, but it must be resolved before unrestricted redistribution of affected third-party sequence collections. See the dated source-by-source audit in `docs/SEQUENCE_REDISTRIBUTION_AUDIT_20260922.md`.

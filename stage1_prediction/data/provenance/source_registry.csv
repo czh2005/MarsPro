@@ -1,19 +1,19 @@
 ﻿source_id,title,top_label,source_type,url,access_status,validation_status,license_public_redistribution_status,source_label_meaning
-CO001,AFP-R AFP database and literature registry,cold_response_related,curated_database,https://bio-comp.ucas.ac.cn/AFP/help/,download_pending,candidate_unvalidated,,
-DE001,Protein surface chemistry encodes desiccation tolerance,desiccation_protection_related,proteome_wide_assay,https://pmc.ncbi.nlm.nih.gov/articles/PMC11312438/,open_full_text,candidate_unvalidated,,
-DE003,Bacterial DtpA hydrophilin promotes desiccation tolerance,desiccation_protection_related,tnseq_knockout,https://pmc.ncbi.nlm.nih.gov/articles/PMC9283220/,open_full_text,candidate_unvalidated,,
-DE004,STF2p hydrophilin required for dehydration stress tolerance,desiccation_protection_related,knockout_overexpression,https://pmc.ncbi.nlm.nih.gov/articles/PMC3306391/,open_full_text,candidate_unvalidated,,
+CO001,AFP-R AFP database and literature registry,cold_response_related,curated_database,https://bio-comp.ucas.ac.cn/AFP/help/,download_pending,candidate_unvalidated,public_access_license_not_found,
+DE001,Protein surface chemistry encodes desiccation tolerance,desiccation_protection_related,proteome_wide_assay,https://pmc.ncbi.nlm.nih.gov/articles/PMC11312438/,open_full_text,candidate_unvalidated,upstream_sequence_terms_required,
+DE003,Bacterial DtpA hydrophilin promotes desiccation tolerance,desiccation_protection_related,tnseq_knockout,https://pmc.ncbi.nlm.nih.gov/articles/PMC9283220/,open_full_text,candidate_unvalidated,upstream_sequence_terms_required,
+DE004,STF2p hydrophilin required for dehydration stress tolerance,desiccation_protection_related,knockout_overexpression,https://pmc.ncbi.nlm.nih.gov/articles/PMC3306391/,open_full_text,candidate_unvalidated,article_cc_by_sequence_terms_pending,
 ISS_CO_AAC,psychrophilic_enzyme_aac,,,,,,not_reviewed_internal_analysis_only,collection membership; not original class and not measured tolerance
-ISS_CO_ESMPSYPRED,esm_psypred,,,,,,not_reviewed_internal_analysis_only,collection membership; not original class and not measured tolerance
-ISS_OX_AOP2020,antioxidant_benchmark_2020,,,,,,not_reviewed_internal_analysis_only,collection membership; not original class and not measured tolerance
-ISS_RD_DNAREPAIR2009,dna_repair_benchmark,,,,,,not_reviewed_internal_analysis_only,collection membership; not original class and not measured tolerance
-ISS_SA_HALOCLASS,haloclass,,,,,,not_reviewed_internal_analysis_only,collection membership; not original class and not measured tolerance
-ISS_SA_HALOMPNN,halompnn,,,,,,not_reviewed_internal_analysis_only,collection membership; not original class and not measured tolerance
-ISS_SA_HPCLAS,hpclas,,,,,,not_reviewed_internal_analysis_only,collection membership; not original class and not measured tolerance
-MX001,,,,,,,,
-OX002,Genome-wide fitness and expression profiling under hydrogen peroxide,oxidative_protection_related,genome_wide_fitness,https://pmc.ncbi.nlm.nih.gov/articles/PMC2676504/,open_full_text,candidate_unvalidated,,
-OX005,Shewanella genome-wide fitness profiling across 121 conditions,oxidative_protection_related,genome_wide_fitness,https://pmc.ncbi.nlm.nih.gov/articles/PMC3219624/,open_full_text,candidate_unvalidated,,
-PE002,Conditional fitness screen for chlorate/perchlorate response,perchlorate_pathway_related,genome_wide_fitness,https://pmc.ncbi.nlm.nih.gov/articles/PMC4438318/,open_full_text,candidate_unvalidated,,
-RA001,Deinococcus Tn5 genome-wide radioresistance screen,radiation_response_related,genome_wide_mutant_screen,https://pmc.ncbi.nlm.nih.gov/articles/PMC4401554/,open_full_text,candidate_unvalidated,,
-RA006,,,,,,,,
-SA006,,,,,,,,
+ISS_CO_ESMPSYPRED,esm_psypred,,,,,,not_confirmed_repository_license,collection membership; not original class and not measured tolerance
+ISS_OX_AOP2020,antioxidant_benchmark_2020,,,,,,internal_only_source_license_not_recorded,collection membership; not original class and not measured tolerance
+ISS_RD_DNAREPAIR2009,dna_repair_benchmark,,,,,,internal_only_source_license_not_recorded,collection membership; not original class and not measured tolerance
+ISS_SA_HALOCLASS,haloclass,,,,,,code_mit_sequence_upstream_terms_required,collection membership; not original class and not measured tolerance
+ISS_SA_HALOMPNN,halompnn,,,,,,permission_required_preprint_derived_data,collection membership; not original class and not measured tolerance
+ISS_SA_HPCLAS,hpclas,,,,,,not_confirmed_repository_license,collection membership; not original class and not measured tolerance
+MX001,,,,,,,public_access_mapping_terms_not_confirmed,
+OX002,Genome-wide fitness and expression profiling under hydrogen peroxide,oxidative_protection_related,genome_wide_fitness,https://pmc.ncbi.nlm.nih.gov/articles/PMC2676504/,open_full_text,candidate_unvalidated,upstream_sequence_terms_required,
+OX005,Shewanella genome-wide fitness profiling across 121 conditions,oxidative_protection_related,genome_wide_fitness,https://pmc.ncbi.nlm.nih.gov/articles/PMC3219624/,open_full_text,candidate_unvalidated,upstream_sequence_terms_required,
+PE002,Conditional fitness screen for chlorate/perchlorate response,perchlorate_pathway_related,genome_wide_fitness,https://pmc.ncbi.nlm.nih.gov/articles/PMC4438318/,open_full_text,candidate_unvalidated,upstream_sequence_terms_required,
+RA001,Deinococcus Tn5 genome-wide radioresistance screen,radiation_response_related,genome_wide_mutant_screen,https://pmc.ncbi.nlm.nih.gov/articles/PMC4401554/,open_full_text,candidate_unvalidated,upstream_sequence_terms_required,
+RA006,,,,,,,public_access_mapping_terms_not_confirmed,
+SA006,,,,,,,public_access_mapping_terms_not_confirmed,
