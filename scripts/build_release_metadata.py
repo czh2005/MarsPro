@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build auditable release metadata from the packaged MarsLikePro tables."""
+"""Build auditable release metadata from the packaged MarsPro tables."""
 from __future__ import annotations
 
 import argparse

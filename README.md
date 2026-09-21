@@ -1,50 +1,78 @@
-# MarsLikePro
+# MarsPro
 
-MarsLikePro is a prediction--design--rescoring framework for proteins associated with six Mars-relevant stress categories: cold, desiccation, oxidative stress, perchlorate-related conditions, radiation/DNA repair, and salt adaptation.
+MarsPro is a sequence-to-design framework for proteins associated with six
+Mars-relevant stress categories: cold, desiccation, oxidative stress,
+perchlorate-related conditions, radiation/DNA repair, and salt adaptation.
 
-The Stage 1 labels encode broad source, family, or proteome membership. They do not assert that every sequence has experimentally demonstrated tolerance. Every sequence--task cell is explicitly represented as `1`, `0`, or `unknown`; unknown cells are excluded from Masked-BCE loss and known-cell evaluation.
+![MarsPro framework](assets/MarsPro_framework.png)
+
+## Overview
+
+MarsPro contains two connected components:
+
+- **MarsClass** predicts six source-association scores from a protein sequence.
+  It uses a ProtT5 encoder, one shared LoRA adapter, a multilabel head, and
+  task-aware Masked-BCE training.
+- **MarsMPNN** adapts ProteinMPNN with a shared LoRA adapter to redesign protein
+  sequences on fixed backbones. A frozen MarsClass model provides an internal
+  reassessment score for matched ProteinMPNN and MarsMPNN designs.
+
+The six labels are broad source, family, or proteome associations. A positive
+label does not mean that every sequence has experimentally demonstrated stress
+tolerance. Each sequence-task cell is represented as `1`, `0`, or `unknown`;
+unknown cells are excluded from Masked-BCE loss and known-cell evaluation.
+
+## Data
+
+- 40,000 protein sequences
+- 36,000 training, 2,000 validation, and 2,000 locked-test records
+- six multilabel stress categories with explicit unknown states
+- ID50 cluster-aware splitting with no registered ID50 cluster shared across
+  the fixed splits
+- a 10,000-sequence structure-corpus index for MarsMPNN adaptation
+
+PDB/CIF files and pretrained base-model weights are not included. Their
+expected identifiers, inputs, and reconstruction metadata are retained.
+
+## Verified results
+
+- MarsClass validation macro AUPRC: **0.977087**
+- MarsClass locked-test macro AUPRC: **0.975286**
+- matched-seed redesign evaluation: 798 backbones, three seeds, and 2,394
+  paired comparisons
+- fixed-test redesign challenge: the mean six-output score increased from
+  **0.61854** to **0.67251**, with **731/1,000** backbones improving
+
+These values measure source-association prediction and computational design
+consistency. They do not constitute experimental proof of stress tolerance.
 
 ## Repository layout
 
-- `stage1_prediction/`: the 40,000-sequence three-state dataset, row-level provenance sidecar, source inventory, construction scripts, selected ProtT5-LoRA checkpoint, locked-test outputs, and ablations.
-- `stage2_design/structure_corpus/`: the 10,000-positive sequence/structure index. PDB/CIF files are intentionally excluded.
-- `stage2_design/matched_seed_798/`: final 798-backbone, three-matched-seed ProteinMPNN versus Marslike-MPNN comparison (4,788 refolded designs).
-- `stage2_design/fixed_test_1000/`: prediction-blind challenge on 1,000 distinct fixed-test ID50 clusters with three matched generation seeds.
-- `docs/`: claim boundaries, data provenance, licenses, refolding protocol, source-holdout protocol, and reproducibility instructions.
-- `paper/`: the current anonymous IEEE manuscript, bilingual Overleaf sources,
-  compiled PDFs, and editable figure sources.
-- `scripts/build_source_holdout.py`: source-level challenge split builder with ID50 and relationship-component exclusion.
-- `scripts/update_manifest.py` and `scripts/verify_release.py`: deterministic inventory and release checks.
+- `stage1_prediction/`: dataset, provenance, MarsClass code, checkpoint,
+  locked-test evaluation, and ablations
+- `stage2_design/`: structure index, MarsMPNN adapter, matched-seed results, and
+  fixed-test redesign challenge
+- `docs/`: label semantics, claim boundaries, protocols, and reproducibility
+  notes
+- `scripts/`: release verification and source-holdout utilities
+- `requirements/`: stage-specific Python dependencies
 
-## Current verified results
-
-- Fixed split: 36,000 train / 2,000 validation / 2,000 locked test; no registered ID50 cluster crosses splits.
-- Shared ProtT5-LoRA + task-aware Masked-BCE: validation macro AUPRC 0.977087; one-time locked-test macro AUPRC 0.975286.
-- Matched-seed design comparison: 798 backbones, seeds 42/43/44, 2,394 paired comparisons, and 4,788 structures. STNQDE and Met/Cys absolute reference distances decrease by 16.67% and 17.30%; US-align RMSD is similar.
-- Fixed-test redesign challenge: mean frozen six-output score increases from 0.61854 to 0.67251; 731/1,000 backbone-level comparisons improve.
-
-These are source-association and computational-design results, not experimental proof of stress tolerance.
-
-## Quick verification
+## Verification
 
 ```bash
 python scripts/update_manifest.py
 python scripts/verify_release.py
 ```
 
-## External assets
+A valid release ends with `MarsPro public-release verification: PASS` and
+reports zero bundled PDB/CIF structures.
 
-Pretrained ProtT5, ProteinMPNN base weights, ESMFold/ESMFold2 weights, and the 10,000 PDB/CIF files are not redistributed. Their identifiers, hashes where available, inputs, parameters, and expected relative paths are documented so users can restore them locally.
+## Licensing and release status
 
-## Licensing
+Code is provided under the MIT License. Author-created metadata and derived
+results are provided under CC BY 4.0. Protein sequences and third-party source
+content retain their upstream terms; see `DATA_LICENSE.md` and
+`stage1_prediction/data/provenance/source_inventory_40k.csv`.
 
-Code is released under the MIT License. Author-created metadata and result tables are released under CC BY 4.0. Protein sequences and third-party source content retain their upstream terms; see `DATA_LICENSE.md` and `stage1_prediction/data/provenance/source_inventory_40k.csv` before redistribution.
-
-## Repository visibility
-
-This complete reproducibility bundle should remain **private** until every
-sequence source marked `not_verified_for_redistribution` in the source
-inventory has been cleared or removed from a public release. The code,
-author-created metadata, derived metrics, paper source, and compact adapter
-checkpoints may be published under their stated licenses. See
-`PUBLIC_RELEASE_CHECKLIST.md` for the final visibility gate.
+This complete repository remains private while sequence redistribution rights
+are reviewed. See `PUBLIC_RELEASE_CHECKLIST.md` before making it public.

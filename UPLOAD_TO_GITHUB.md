@@ -14,7 +14,7 @@ satisfied.
 git init
 git lfs install
 git add .
-git commit -m "Initial reproducible MarsLikePro release"
+git commit -m "Initial reproducible MarsPro release"
 git branch -M main
 git remote add origin <repository-url>
 git push -u origin main

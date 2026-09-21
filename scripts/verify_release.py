@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the public MarsLikePro release without modifying artifacts."""
+"""Verify the public MarsPro release without modifying artifacts."""
 from __future__ import annotations
 
 import csv
@@ -163,7 +163,7 @@ def main() -> None:
     sequence_count, unresolved_licenses = verify_stage1()
     structure_count, pair_count = verify_stage2()
     verify_cleanliness()
-    print("MarsLikePro public-release verification: PASS")
+    print("MarsPro public-release verification: PASS")
     print(f"Stage 1: {sequence_count:,} sequences; locked-test macro AUPRC 0.975286")
     print(f"Stage 2: {structure_count:,} structure-index rows; {pair_count:,} matched-seed pairs")
     print("Fixed-test redesign: 1,000 backbones; aggregate score improved in 731")
