@@ -1,6 +1,6 @@
 # Scientific-source holdout protocol
 
-This protocol is an additional generalization test. It does not replace or modify the fixed 36k/2k/2k split.
+This protocol is an additional generalization test. It does not replace or modify the fixed 36k/2k/2k split. It is a derived evaluation protocol, not a claim that every registered source already has a completed model result.
 
 Create one derived fold at a time without editing the canonical split files:
 
@@ -11,6 +11,13 @@ python scripts/build_source_holdout.py \
 ```
 
 The command writes filtered training and validation tables, an expanded challenge table, row-level exclusion reasons, and a hash-bearing manifest. The original non-challenge test rows are not added to training or validation.
+
+The command is deliberately source-ID driven. A source ID must be present in
+`source_registry.csv` and in the sidecar's `scientific_source_ids` field; a
+missing source ID is an error rather than an empty fold. The script expands the
+held-out source to touching ID50 clusters and relationship components before
+writing the derived fold, so source leakage is handled by the same exclusion
+unit used in the manuscript.
 
 ## Unit of exclusion
 
@@ -28,7 +35,7 @@ Retrain the selected shared ProtT5-LoRA + Masked-BCE configuration from the same
 - Bootstrap by relationship component or ID50 cluster, not by repeated label cells.
 - Compare with the length/amino-acid-composition baseline and homology transfer.
 
-## Feasible first folds
+## Feasible first folds and current status
 
 - cold: `ISS_CO_ESMPSYPRED` gives 309 positives, 1,615 zeros, and 12 unknown cells after group expansion; `ISS_CO_AAC` gives 243/1,149/6. Both support binary source-holdout evaluation.
 - desiccation: `DE003` gives 2,492 positives and no observed zero. Use positive recall or retrieval, not AUROC/MCC.
@@ -38,4 +45,8 @@ Retrain the selected shared ProtT5-LoRA + Masked-BCE configuration from the same
 
 Perchlorate currently lacks a sufficiently independent second large source; a source-holdout result for that task should be marked not evaluable until another source is added.
 
-The counts above were generated from the frozen 40,000-row release with `--report-only`; see `source_holdout_candidate_counts.csv`. They are fold sizes, not completed model results.
+The counts above were generated from the frozen 40,000-row release with
+`--report-only`; see `source_holdout_candidate_counts.csv`. They are fold sizes,
+not completed model results. Completed model metrics and one-class limitations
+are tracked separately in `SOURCE_HOLDOUT_RESULTS_STATUS.md` so that a
+candidate-count report cannot be mistaken for a trained holdout result.

@@ -52,6 +52,8 @@ consistency. They do not constitute experimental proof of stress tolerance.
   locked-test evaluation, and ablations
 - `stage2_design/`: structure index, MarsMPNN adapter, matched-seed results, and
   fixed-test redesign challenge
+- `assets/figure_editable/`: author-provided editable figure projects used to
+  regenerate the manuscript figures
 - `docs/`: label semantics, claim boundaries, protocols, and reproducibility
   notes
 - `scripts/`: release verification and source-holdout utilities
@@ -74,7 +76,13 @@ results are provided under CC BY 4.0. Protein sequences and third-party source
 content retain their upstream terms; see `DATA_LICENSE.md` and
 `stage1_prediction/data/provenance/source_inventory_40k.csv`.
 
-This repository is public. Sequence redistribution rights remain unverified for
-11 of the 18 registered scientific sources. Users must consult
+The code, author-created metadata, protocols, and derived results are public.
+Sequence redistribution rights remain unverified for 11 of the 18 registered
+scientific sources, so this repository is not a blanket redistribution grant.
+Users must consult
 `stage1_prediction/data/provenance/source_inventory_40k.csv` and the upstream
-terms before redistributing source-derived sequence content.
+terms before redistributing source-derived sequence content. The source-holdout
+protocol and its task-level evaluability status are documented in
+`docs/SOURCE_HOLDOUT_PROTOCOL.md` and
+`docs/SOURCE_HOLDOUT_RESULTS_STATUS.md`; report-only fold counts are not model
+results.
