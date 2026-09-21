@@ -1,11 +1,12 @@
 # Public release checklist
 
-The repository is ready for a private GitHub backup and collaborator review.
-Before changing repository visibility to public:
+The repository is public as of 2026-09-21. The following checks remain the
+maintainer's release obligations:
 
 1. Review `stage1_prediction/data/provenance/source_inventory_40k.csv`.
-2. Resolve every `not_verified_for_redistribution` sequence source, or publish
-   a metadata-only release that excludes the affected sequence rows.
+2. Resolve every `not_verified_for_redistribution` sequence source, or replace
+   the current sequence bundle with a metadata-only release that excludes the
+   affected sequence rows.
 3. Confirm the upstream terms for pretrained models and third-party software;
    base-model weights are intentionally excluded here.
 4. Run `python scripts/update_manifest.py` followed by

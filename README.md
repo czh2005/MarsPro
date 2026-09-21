@@ -74,5 +74,7 @@ results are provided under CC BY 4.0. Protein sequences and third-party source
 content retain their upstream terms; see `DATA_LICENSE.md` and
 `stage1_prediction/data/provenance/source_inventory_40k.csv`.
 
-This complete repository remains private while sequence redistribution rights
-are reviewed. See `PUBLIC_RELEASE_CHECKLIST.md` before making it public.
+This repository is public. Sequence redistribution rights remain unverified for
+11 of the 18 registered scientific sources. Users must consult
+`stage1_prediction/data/provenance/source_inventory_40k.csv` and the upstream
+terms before redistributing source-derived sequence content.
