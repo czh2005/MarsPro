@@ -1,0 +1,95 @@
+{
+  "version": "metadata_sidecar_v1_20260909",
+  "generated_at": "2026-09-09T22:53:23.316437+08:00",
+  "row_count": 40000,
+  "unique_sequence_id_count": 40000,
+  "unique_sequence_sha256_count": 40000,
+  "split_counts": {
+    "train": 36000,
+    "validation": 2000,
+    "test": 2000
+  },
+  "metadata_system_coverage": {
+    "broad_membership_catalog": 19982,
+    "cleanroom_tiered_total": 11786,
+    "legacy_69144": 16286,
+    "union": 40000
+  },
+  "scientific_source_id_rows": 30257,
+  "taxonomy_resolved_rows": 35093,
+  "pfam_annotated_rows": 1443,
+  "v3_evidence_matched_rows": 3681,
+  "v3_individual_valid_rows": 232,
+  "v3_strict_rows": 9,
+  "reserved_direct_challenge_rows": 6,
+  "coverage_by_split": [
+    {
+      "split": "train",
+      "rows": 36000,
+      "scientific_source_id_rows": 27230,
+      "taxonomy_resolved_rows": 31578,
+      "v3_evidence_matched_rows": 3329,
+      "v3_individual_valid_rows": 209,
+      "v3_strict_rows": 9
+    },
+    {
+      "split": "validation",
+      "rows": 2000,
+      "scientific_source_id_rows": 1530,
+      "taxonomy_resolved_rows": 1752,
+      "v3_evidence_matched_rows": 176,
+      "v3_individual_valid_rows": 10,
+      "v3_strict_rows": 0
+    },
+    {
+      "split": "test",
+      "rows": 2000,
+      "scientific_source_id_rows": 1497,
+      "taxonomy_resolved_rows": 1763,
+      "v3_evidence_matched_rows": 176,
+      "v3_individual_valid_rows": 13,
+      "v3_strict_rows": 0
+    }
+  ],
+  "coarse_import_bucket_counts": [
+    {
+      "coarse_import_buckets": "gao",
+      "rows": 13415
+    },
+    {
+      "coarse_import_buckets": "original",
+      "rows": 9808
+    },
+    {
+      "coarse_import_buckets": "new",
+      "rows": 9737
+    },
+    {
+      "coarse_import_buckets": "gao|original",
+      "rows": 5008
+    },
+    {
+      "coarse_import_buckets": "gao|new",
+      "rows": 882
+    },
+    {
+      "coarse_import_buckets": "gao|new|original",
+      "rows": 618
+    },
+    {
+      "coarse_import_buckets": "new|original",
+      "rows": 532
+    }
+  ],
+  "input_sha256": {
+    "D:\\火星蛋白\\AAA数据集\\AAAESM模型训练4w\\train.csv": "6331f18fff82d2a163359aabd0bc23dad450a21cb220753ccc02ee02c9d7c52c",
+    "D:\\火星蛋白\\AAA数据集\\AAAESM模型训练4w\\validation.csv": "0e66dcef3fc38d731e73b2bd0df8dc70e67ad54b112a2307d18a3df92418021c",
+    "D:\\火星蛋白\\AAA数据集\\AAAESM模型训练4w\\test.csv": "078c1363516366c9a3204c7697e7df71317a627962ccf9187af01eaf943cda4f"
+  },
+  "semantic_guards": [
+    "six binary labels are broad source/proteome membership labels",
+    "zero is not a biological negative",
+    "unknown evidence is not converted to zero",
+    "v3 evidence fields are supplementary and do not overwrite the six training labels"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "verified": true,
+  "new_rows": 2021,
+  "positive_total_rows": 10000,
+  "ledger_rows": 12021,
+  "old_nonpositive_preserved": 2021,
+  "new_ID50_clusters": 2021,
+  "new_known_relationship_rows": 1193,
+  "positive_counts": {
+    "cold": 2006,
+    "desiccation": 2007,
+    "oxidative": 2007,
+    "perchlorate": 2003,
+    "radiation": 2006,
+    "salt": 2006
+  },
+  "input_hashes_unchanged": true,
+  "current_labels_preserved": true,
+  "old_structure_references_preserved": true,
+  "new_predictions_launched": false,
+  "limitation": "Known component isolation only; missing relationship annotations do not establish independence. PDB quality not re-evaluated."
+}

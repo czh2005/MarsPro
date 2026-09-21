@@ -1,0 +1,51 @@
+{
+  "schema_version": "marslikepro_public_release_audit_v1_20260918",
+  "rows": 40000,
+  "unique_sequence_ids": 40000,
+  "split_counts": {
+    "train": 36000,
+    "validation": 2000,
+    "test": 2000
+  },
+  "label_state_counts": {
+    "cold": {
+      "unknown": 32829,
+      "1": 4510,
+      "0": 2661
+    },
+    "desiccation": {
+      "unknown": 31638,
+      "1": 7250,
+      "0": 1112
+    },
+    "oxidative": {
+      "unknown": 30367,
+      "0": 2458,
+      "1": 7175
+    },
+    "perchlorate": {
+      "unknown": 37509,
+      "1": 2229,
+      "0": 262
+    },
+    "radiation": {
+      "1": 4583,
+      "unknown": 28605,
+      "0": 6812
+    },
+    "salt": {
+      "unknown": 28668,
+      "1": 8181,
+      "0": 3151
+    }
+  },
+  "known_label_cells": 50384,
+  "unknown_label_cells": 189616,
+  "unique_id50_clusters": 40000,
+  "cross_split_id50_cluster_count": 0,
+  "cross_split_id50_clusters": [],
+  "sidecar_rows": 40000,
+  "sidecar_sequence_id_match": true,
+  "scientific_source_count": 18,
+  "sources_with_unverified_redistribution": 11
+}

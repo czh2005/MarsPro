@@ -1,0 +1,9 @@
+﻿方法ID,运行数,完成数,AP均值,AP样本标准差,说明,旧方法ID
+ProtT5_LoRA_MaskedBCE_Missing25pct,1,1,0.9750446595259676,,每种子已选epoch后统计；单种子不计算标准差,artificial_missing
+HandcraftedFeatures_LightGBM,1,1,0.9353019153557697,,每种子已选epoch后统计；单种子不计算标准差,lightgbm
+HandcraftedFeatures_RandomForest,1,1,0.9188853998373758,,每种子已选epoch后统计；单种子不计算标准差,random_forest
+ProtT5_LoRA_RandomMatchedMask,3,3,0.945671342704545,0.0014270448000760201,每种子已选epoch后统计；单种子不计算标准差,random_matched
+ProtT5_LoRA_ShuffledRowMask,1,1,0.9408772435428774,,每种子已选epoch后统计；单种子不计算标准差,shuffled_rows
+ProtT5_LoRA_MaskedBCE,3,3,0.975787355576954,0.00016614011718561064,每种子已选epoch后统计；单种子不计算标准差,C_shared_masked
+ProtT5_Frozen_BCE,1,1,0.9507003317256375,,冻结主干补充；单种子，五轮最佳,
+ProtT5_Frozen_MaskedBCE,1,1,0.9741499758046438,,冻结主干补充；单种子，五轮最佳,

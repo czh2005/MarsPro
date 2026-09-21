@@ -1,0 +1,29 @@
+{
+  "protocol_version": "locked-test-v1",
+  "created_at": "2026-09-18T00:38:20+08:00",
+  "method_id": "shared_prott5_lora_masked_bce",
+  "model_selection": "selected using validation only before test access",
+  "dataset": "AAAA并集来源0_v3_20260910",
+  "expected_test_rows": 2000,
+  "labels": ["cold", "desiccation", "oxidative", "perchlorate", "radiation", "salt"],
+  "thresholds": {
+    "cold": 0.73486328125,
+    "desiccation": 0.8818359375,
+    "oxidative": 0.377685546875,
+    "perchlorate": 0.80859375,
+    "radiation": 0.36669921875,
+    "salt": 0.595703125
+  },
+  "unknown_policy": "exclude from loss and all binary test metrics",
+  "test_access_policy": "seal probabilities before joining labels; no model, threshold, or split changes after evaluation",
+  "expected_sha256": {
+    "train_csv": "ECA945639360612C09B39BFCBD3C9EBE58EF5752C5247CDC66B34189C09C17C4",
+    "validation_csv": "4365AEA244EC2167414E5FC7CB35139F62191EB788D2261FCF1900EC50C84367",
+    "test_csv": "4209142C39017AD0980DC1266355D17B11D1884C4C56BBCC9F50119D565C6C1A",
+    "metadata_csv": "3FE1744ABA3EFD422152F4A09E8C747C4A491CE0C96CDB737D7363C97D22E9E6",
+    "validation_sentinel_json": "6CDB46B29AEDA9B4D9AD20CEBA1DABEE06E4811ABA16296146A02C915AC92904",
+    "checkpoint": "9CAC216F122BDCCAEBD277639062B103854E40D3E2B7B73B1482BFC78BA32073",
+    "model_config": "22813E2025140A7CA465B3E7E8BB6E8DE7128A601E0BFB978F0C157AA5CFD77E",
+    "training_code": "F48FDF9A0C34CC7641D4FF8D03D1265E6C2F7C9372B7CCFACD5AE2A6E56B159B"
+  }
+}

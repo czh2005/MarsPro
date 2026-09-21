@@ -1,0 +1,37 @@
+{
+  "method": "shared_prott5_lora_masked_bce",
+  "split": "test",
+  "macro_auprc": 0.9752856420096873,
+  "macro_auroc": 0.9600341651471038,
+  "macro_f1": 0.9175551491279003,
+  "macro_mcc": 0.7411761181827633,
+  "macro_ap_minus_random": 0.2658543410427853,
+  "micro": {
+    "count": 2509,
+    "positive": 1675,
+    "negative": 834,
+    "positive_prevalence": 0.6675966520526107,
+    "threshold": 0.5,
+    "f1": 0.9173703256936068,
+    "positive_recall": 0.9080597014925373,
+    "negative_recall": 0.8561151079136691,
+    "mcc": 0.7567788657570128,
+    "brier": 0.07124810911907889,
+    "ece_10bin": 0.021701549428922336,
+    "mean_probability": 0.6660517379552446,
+    "auprc": 0.982104464950728,
+    "auroc": 0.963293961845449,
+    "random_ap": 0.6675966520526107,
+    "ap_minus_random": 0.31450781289811736,
+    "ap_lift_over_random": 1.4711045388426127
+  },
+  "thresholds": {
+    "cold": 0.73486328125,
+    "desiccation": 0.8818359375,
+    "oxidative": 0.377685546875,
+    "perchlorate": 0.80859375,
+    "radiation": 0.36669921875,
+    "salt": 0.595703125
+  },
+  "unknown_counted_as_negative": false
+}

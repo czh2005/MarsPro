@@ -1,0 +1,22 @@
+{
+  "root": "/sddn/yyf_work/chenzhenghang/mars-tool",
+  "model_path": "/sddn/yyf_work/chenzhenghang/mars-tool/models/prott5",
+  "run_name": "shared_masked_bce",
+  "mode": "masked_bce",
+  "target_task": "shared",
+  "seed": 42,
+  "epochs": 5,
+  "microbatch_per_gpu": 1,
+  "gradient_accumulation": 16,
+  "adapter_lr": 0.0001,
+  "head_lr": 0.0003,
+  "weight_decay": 0.01,
+  "class_balance": "none",
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "precision": "float16",
+  "num_workers": 2,
+  "unknown_training_policy": "zero_loss_mask",
+  "evaluation_policy": "known_labels_only"
+}

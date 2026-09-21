@@ -1,0 +1,9 @@
+{
+  "amendment": 1,
+  "scope": "inference input parser only",
+  "reason": "The first attempt stopped before producing predictions because the inherited training reader required label columns. The blind input intentionally contains only sequence_id and sequence.",
+  "scientific_protocol_changed": false,
+  "test_labels_accessed": false,
+  "predictions_produced_before_amendment": false,
+  "replacement_score_code_sha256": "6509F593B3242FECFF20FD735E023FA02164305EBDB8EEADFA484372B306A7B7"
+}

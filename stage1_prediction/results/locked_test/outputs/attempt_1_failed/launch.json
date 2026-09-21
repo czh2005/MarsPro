@@ -1,0 +1,14 @@
+{
+  "state": "failed",
+  "gpu": "0",
+  "pid": 145743,
+  "started_at": 1789662676.9841044,
+  "command": [
+    "/sddn/yyf_work/chenzhenghang/mars-tool/envs/marslikepro/bin/python",
+    "/sddn/yyf_work/chenzhenghang/mars-tool/experiments/locked_test_shared_prott5_maskedbce_20260918_003820/code/score_locked_test.py",
+    "--work",
+    "/sddn/yyf_work/chenzhenghang/mars-tool/experiments/locked_test_shared_prott5_maskedbce_20260918_003820"
+  ],
+  "exit_code": 1,
+  "finished_at": 1789662777.0430548
+}

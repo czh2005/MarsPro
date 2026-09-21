@@ -1,0 +1,30 @@
+{
+  "version": "fixed_test_redesign_rescore_20260918_v1",
+  "created_at_utc": "2026-09-18T09:39:37.049822+00:00",
+  "status": "PASS",
+  "fixed_test_selected": 1000,
+  "folded_backbones": 1000,
+  "fold_failures": 0,
+  "mpnn_methods": [
+    "ProteinMPNN",
+    "Marslike-MPNN joint LoRA"
+  ],
+  "matched_seeds": [
+    42,
+    43,
+    44
+  ],
+  "paired_designs": 3000,
+  "design_sequences": 6000,
+  "scored_unique_sequences": 7000,
+  "excel_sheet_rows": {
+    "综合结果": 3,
+    "六标签正类": 6,
+    "三种子骨架汇总": 1000,
+    "逐种子配对": 3000,
+    "逐序列评分": 7000
+  },
+  "file_count_excluding_manifest_and_pycache": 59,
+  "checkpoint_sha256": "9cac216f122bdccaebd277639062b103854e40d3e2b7b73b1482bfc78ba32073",
+  "sentinel_max_abs_error": 0.0
+}

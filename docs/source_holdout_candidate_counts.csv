@@ -1,0 +1,8 @@
+source_id,task,anchor_sequences,expanded_challenge_sequences,remaining_train_sequences,remaining_validation_sequences,task_positive,task_zero,task_unknown,recommended_evaluation
+ISS_CO_ESMPSYPRED,cold,1924,1936,34249,1905,309,1615,12,binary_source_holdout
+ISS_CO_AAC,cold,1390,1398,34745,1925,243,1149,6,binary_source_holdout
+DE003,desiccation,2492,2492,33768,1866,2492,0,0,positive_recall_or_retrieval_only
+ISS_OX_AOP2020,oxidative,1576,1578,34582,1914,169,1397,12,binary_source_holdout
+OX002,oxidative,4792,4794,31677,1770,4777,7,10,highly_imbalanced_positive_recall_primary
+RA006,radiation,832,832,35252,1948,832,0,0,positive_recall_or_retrieval_only
+ISS_SA_HALOCLASS,salt,4097,4107,32285,1805,1788,2307,12,binary_source_holdout

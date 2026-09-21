@@ -1,0 +1,15 @@
+{
+  "checked_at": 1789663131.2385006,
+  "hostname": "ibsgpu03",
+  "gpus": "0, GPU-f47773b7-0422-1769-7ee6-debc0ed5f6c1, 0, 0, 0\n1, GPU-261a769a-4d87-3a96-2dbb-6442f892b5e3, 0, 0, 0\n2, GPU-9dd24ac7-f308-2c2a-51d9-696b75568818, 0, 0, 0\n3, GPU-50c198aa-cac9-67f6-b190-6bf77694fb8f, 0, 0, 0\n4, GPU-c24b958c-efb8-0195-adb0-ad270c658154, 0, 0, 0\n5, GPU-51dcbdb9-f71f-6e95-bd3a-41e7dd6ca03b, 0, 0, 0\n6, GPU-210fb448-2950-74ab-3391-78aefbd4caf8, 0, 0, 0\n7, GPU-86ec12bd-ad1f-177e-ef36-ea6783a11f50, 0, 3, 0\n",
+  "compute_applications": "",
+  "eligible_gpus": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+  ]
+}

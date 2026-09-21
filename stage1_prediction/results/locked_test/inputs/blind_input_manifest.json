@@ -1,0 +1,11 @@
+{
+  "protocol_version": "locked-test-v1",
+  "source_test_sha256": "4209142C39017AD0980DC1266355D17B11D1884C4C56BBCC9F50119D565C6C1A",
+  "blind_input_sha256": "636845678B84EE298AFDD3F369BE3B99B68524CF0B27772763169682AF5A26F6",
+  "row_count": 2000,
+  "columns": [
+    "sequence_id",
+    "sequence"
+  ],
+  "contains_labels": false
+}

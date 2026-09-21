@@ -1,0 +1,17 @@
+.staging/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.pdb
+*.cif
+*.mmcif
+*.tar
+*.tar.gz
+*.whl
+models/base/
+weights/base/

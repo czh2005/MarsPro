@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "estimator": "random_forest",
+  "feature_count": 582,
+  "train_rows": 36000,
+  "validation_rows": 2000,
+  "macro_validation_auprc": 0.9188853998373757,
+  "elapsed_seconds": 47.98988676071167,
+  "train_sha256": "eca945639360612c09b39bfcbd3c9ebe58ef5752c5247cdc66b34189c09c17c4",
+  "validation_sha256": "4365aea244ec2167414e5fc7cb35139f62191eb788d2261fcf1900ec50c84367",
+  "test_evaluated": false
+}

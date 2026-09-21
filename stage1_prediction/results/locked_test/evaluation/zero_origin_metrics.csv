@@ -1,0 +1,9 @@
+method,split,task,zero_origin,count,mean_probability,false_positive_rate,specificity
+shared_prott5_lora_masked_bce,test,cold,existing_source_control_zero,130,0.2128384755207942,0.1076923076923077,0.8923076923076924
+shared_prott5_lora_masked_bce,test,desiccation,phenotype_sensitive_source_zero,50,0.23847766876220702,0.1,0.9
+shared_prott5_lora_masked_bce,test,oxidative,existing_source_control_zero,69,0.3839680768441463,0.4057971014492754,0.5942028985507246
+shared_prott5_lora_masked_bce,test,oxidative,phenotype_sensitive_source_zero,55,0.09258946505459872,0.09090909090909091,0.9090909090909091
+shared_prott5_lora_masked_bce,test,perchlorate,phenotype_sensitive_source_zero,11,0.11324865167791193,0.0,1.0
+shared_prott5_lora_masked_bce,test,radiation,existing_source_control_zero,335,0.11156063079833985,0.08358208955223881,0.9164179104477612
+shared_prott5_lora_masked_bce,test,radiation,phenotype_sensitive_source_zero,29,0.5003178037446121,0.6206896551724138,0.3793103448275862
+shared_prott5_lora_masked_bce,test,salt,existing_source_control_zero,155,0.22183550250145698,0.14193548387096774,0.8580645161290322

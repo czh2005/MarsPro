@@ -1,0 +1,12 @@
+{
+  "seed": 44,
+  "temperature": 0.1,
+  "rows_per_method": 1000,
+  "elapsed_seconds": 2622.9334259033203,
+  "base_checkpoint_sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+  "joint_lora_checkpoint_sha256": "d5c161e53b417bd88f373e2f0fcc31d864768bf6169fe021513f60605dea37be",
+  "test_csv_sha256": "e55e08a21fd27bbbd6f5785678f993194ffdf34d09f4c8ae2232570e4321e1ff",
+  "lora_missing_key_count": 118,
+  "lora_unexpected_keys": [],
+  "sampling_pairing": "same per-backbone derived seed for both methods"
+}

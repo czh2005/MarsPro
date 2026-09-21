@@ -1,0 +1,48 @@
+{
+  "protocol_version": "fixed_test_unseen_redesign_v1_20260918",
+  "selection_seed": "fixed-test-redesign-20260918",
+  "source_split": "fixed test only",
+  "target_rows": 1000,
+  "eligibility": [
+    "at least one source-level positive label",
+    "canonical amino-acid sequence",
+    "length <= 500 aa",
+    "no exact, registered ID50, or registered relation-component overlap with stage1 train/validation",
+    "no exact or registered ID50 overlap with the existing 10k MPNN structure corpus"
+  ],
+  "selection": "ascending SHA256(selection_seed + '|' + sequence_id); prediction-blind",
+  "candidate_test_rows": 2000,
+  "eligible_rows": 1121,
+  "selected_rows": 1000,
+  "label_positive_counts": {
+    "cold": 171,
+    "desiccation": 245,
+    "oxidative": 230,
+    "perchlorate": 85,
+    "radiation": 128,
+    "salt": 309
+  },
+  "length_bin_counts": {
+    "1-100": 109,
+    "101-200": 322,
+    "201-300": 267,
+    "301-400": 183,
+    "401-500": 119
+  },
+  "selected_unique_ids": 1000,
+  "selected_unique_sequences": 1000,
+  "selected_unique_id50_clusters": 1000,
+  "selected_relation_components_known": 253,
+  "input_sha256": {
+    "train": "eca945639360612c09b39bfcbd3c9ebe58ef5752c5247cdc66b34189c09c17c4",
+    "validation": "4365aea244ec2167414e5fc7cb35139f62191eb788d2261fcf1900ec50c84367",
+    "test": "4209142c39017ad0980dc1266355d17b11d1884c4c56bbcc9f50119d565c6c1a"
+  },
+  "sidecar_sha256": "3fe1744aba3efd422152f4a09e8c747c4a491ce0c96cdb737d7363c97d22e9e6",
+  "mpnn_10k_sha256": "abb2204fa82e9b9d6cd7292ee367e93d52fb432938e0d3e4390bb985c7349b60",
+  "output_sha256": {
+    "csv": "96ca453aaf7120d6dcd8e6b02e93c3a06f45e086477cdb86167dc352c3bd3caa",
+    "fasta": "f9f57a4d4ba8f8ec24547149eb72ab7bfb7dd1ea575cef629228663da616f098",
+    "audit": "0e2ac6876a288967a610d7e8e669be6bd0f6d894c7acfd7b5b0572ce6bfac496"
+  }
+}

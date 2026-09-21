@@ -1,0 +1,40 @@
+{
+  "version": "mpnn_stage1_rescoring_v1",
+  "checkpoint_run": "shared_masked_bce_20260910_234438",
+  "checkpoint_selection": "pre-existing v5 C_shared_masked validation winner, no reselection",
+  "architecture": "ProtT5 shared q/v LoRA r8 + residue mean pooling + LN/256 GELU/6 sigmoid head",
+  "tasks": [
+    "cold",
+    "desiccation",
+    "oxidative",
+    "perchlorate",
+    "radiation",
+    "salt"
+  ],
+  "primary": "per-task Mars minus base score on reference original label=1; six separate effects",
+  "secondary": [
+    "reference-label 0 and unknown strata",
+    "all-backbone per-task deltas",
+    "six-dimensional Euclidean distance to reference probability vector; diagnostic not aggregate activity score"
+  ],
+  "inherited_labels": "reference annotations define strata only; not ground-truth design labels",
+  "uncertainty": {
+    "resampling_unit": "union of reference registered ID50 and relation components",
+    "bootstrap": 10000,
+    "seed": 20260916,
+    "ci": 0.95,
+    "estimator": "pair-weighted mean",
+    "multiple_testing": "BH across six component-mean sign-flip primary tests; 20000 permutations"
+  },
+  "sentinel": "compare 32 length-spaced validation records with saved probabilities before inference; max absolute tolerance 0.002",
+  "inference": "float16 autocast, batch1, no truncation, no training, deduplicate exact sequences",
+  "no_auroc_or_ap_on_designs": true,
+  "no_threshold_tuning": true,
+  "no_function_claim": true,
+  "limitation": "single generated sample per backbone and unequal generation seeds; training exposure audited, not independent validation",
+  "input_hashes": {
+    "inference_sequences.csv": "a020f9826c26ff99c851d6e07738b6a55de2381e62fb4e3163e83dc7f0a9e566",
+    "paired_reference_audit.csv": "99be9d1e582dbac70713e240ee66fbaa1e4777c5caf44792cb0b799a83b38fba",
+    "sequence_mapping.csv": "3547565928585ece7ff3cec5c88b141149eb6f3b81e9c1acf3ecdc2e63ef24d4"
+  }
+}

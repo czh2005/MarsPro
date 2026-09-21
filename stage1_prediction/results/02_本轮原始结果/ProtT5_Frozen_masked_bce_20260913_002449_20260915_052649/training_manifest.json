@@ -1,0 +1,36 @@
+{
+  "status": "running",
+  "training_rows": 36000,
+  "training_internal_role": "full_train",
+  "known_positions_per_task": {
+    "cold": 6453,
+    "desiccation": 7520,
+    "oxidative": 8668,
+    "perchlorate": 2244,
+    "radiation": 10259,
+    "salt": 10206
+  },
+  "positive_positions_per_task": {
+    "cold": 4053,
+    "desiccation": 6524,
+    "oxidative": 6463,
+    "perchlorate": 2007,
+    "radiation": 4150,
+    "salt": 7363
+  },
+  "negative_positions_per_task": {
+    "cold": 2400,
+    "desiccation": 996,
+    "oxidative": 2205,
+    "perchlorate": 237,
+    "radiation": 6109,
+    "salt": 2843
+  },
+  "epochs": 5,
+  "updates_per_epoch": 563,
+  "total_updates_planned": 2815,
+  "world_size": 1,
+  "trainable_parameters": 265990,
+  "total_parameters": 1208407814,
+  "test_evaluated": false
+}

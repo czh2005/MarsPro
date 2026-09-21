@@ -1,0 +1,26 @@
+{
+  "root": "/sddn/yyf_work/chenzhenghang/mars-tool",
+  "model_path": "/sddn/yyf_work/chenzhenghang/mars-tool/models/prott5",
+  "run_name": "ProtT5_Frozen_bce_zero_fill_20260913_002449",
+  "mode": "bce_zero_fill",
+  "target_task": "shared",
+  "seed": 42,
+  "epochs": 5,
+  "microbatch_per_gpu": 1,
+  "gradient_accumulation": 64,
+  "effective_batch_size": 64,
+  "adapter_lr": 0.0001,
+  "head_lr": 0.0003,
+  "weight_decay": 0.01,
+  "class_balance": "none",
+  "precision": "float16",
+  "num_workers": 2,
+  "encoder_policy": "all encoder parameters frozen; eval mode",
+  "test_evaluated": false,
+  "world_size": 1,
+  "input_hashes": {
+    "train.csv": "eca945639360612c09b39bfcbd3c9ebe58ef5752c5247cdc66b34189c09c17c4",
+    "validation.csv": "4365aea244ec2167414e5fc7cb35139f62191eb788d2261fcf1900ec50c84367"
+  },
+  "comparison_note": "Batch64 matches historical four-GPU microbatch1 accumulation16 launch; distinct from later batch16 mask study."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "best_validation_macro_auprc": 0.9465103659076103,
+  "best_thresholds": {
+    "cold": 0.058563232421875,
+    "desiccation": 0.04931640625,
+    "oxidative": 0.10650634765625,
+    "perchlorate": 0.0127716064453125,
+    "radiation": 0.2186279296875,
+    "salt": 0.2252197265625
+  },
+  "elapsed_seconds": 22250.659126520157,
+  "gpu_hours": 12.361477292511198,
+  "training_rows": 36000,
+  "total_updates": 11250,
+  "test_evaluated": false
+}

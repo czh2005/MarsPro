@@ -1,0 +1,11 @@
+{
+  "batch": "prott5_frozen_pair_20260913_002449",
+  "status": "queued_not_training",
+  "frozen_encoder_unchanged_and_head_update_test": "passed_on_cpu",
+  "BCE": {"node": "ibsgpu02", "queue_pid": 429230, "status": "waiting_for_unoccupied_gpu", "remote_checked_at_unix": 1789229814.3797078},
+  "MaskedBCE": {"node": "ibsgpu03", "queue_pid": 327469, "status": "waiting_for_unoccupied_gpu", "remote_checked_at_unix": 1789229641.895494},
+  "poll_seconds": 600,
+  "excluded_gpu": "ibsgpu02:2",
+  "test_evaluated": false,
+  "remote_directory": "/sddn/yyf_work/chenzhenghang/mars-tool/experiments/prott5_frozen_pair_20260913_002449"
+}

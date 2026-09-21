@@ -1,0 +1,320 @@
+{
+  "config": {
+    "seed": 20260914,
+    "target_positive_total": 10000,
+    "min_length": 51,
+    "max_length": 1024,
+    "labels": "exact current v3; unknown preserved",
+    "group_isolation": "existing 10000 and heldout sequence/id/ID50; known relationship components also excluded",
+    "selection": "greedy minimum six-label count variance; source/genus/family/length diversity within label-pattern ties; improving one-record label-pattern swaps",
+    "diversity_weights": {
+      "source": 4,
+      "genus": 1,
+      "pfam": 0.5,
+      "coarse": 0.4,
+      "length": 0.3
+    },
+    "claim": "deterministic heuristic, no global optimality claim"
+  },
+  "selected_count": 2021,
+  "pool_filter_exclusions": {
+    "sequence_id": 10000,
+    "no_positive": 8535,
+    "length": 263,
+    "nonstandard_residue": 27,
+    "known_relation_overlap": 3
+  },
+  "balance_swaps": 217,
+  "diversity_swaps": 0,
+  "stats": {
+    "before": {
+      "rows": 7979,
+      "positive_counts": {
+        "cold": 1250,
+        "desiccation": 2004,
+        "oxidative": 1882,
+        "perchlorate": 1986,
+        "radiation": 1142,
+        "salt": 1597
+      },
+      "unique_ID50": 7979,
+      "scientific_source_ids": 17,
+      "source_ids": [
+        "CO001",
+        "DE001",
+        "DE003",
+        "DE004",
+        "ISS_CO_AAC",
+        "ISS_CO_ESMPSYPRED",
+        "ISS_OX_AOP2020",
+        "ISS_RD_DNAREPAIR2009",
+        "ISS_SA_HALOCLASS",
+        "ISS_SA_HALOMPNN",
+        "ISS_SA_HPCLAS",
+        "MX001",
+        "OX002",
+        "OX005",
+        "PE002",
+        "RA006",
+        "SA006"
+      ],
+      "unknown_source_rows": 2438,
+      "source_fractional_counts": {
+        "ISS_SA_HPCLAS": 268.33333333333337,
+        "DE001": 643.3333333333334,
+        "OX002": 763.8333333333339,
+        "RA006": 303.5,
+        "PE002": 1614.0,
+        "ISS_CO_ESMPSYPRED": 119.33333333333333,
+        "DE003": 365.0,
+        "SA006": 307.0,
+        "CO001": 48.5,
+        "ISS_SA_HALOCLASS": 356.1666666666667,
+        "ISS_RD_DNAREPAIR2009": 467.74999999999915,
+        "ISS_CO_AAC": 160.58333333333331,
+        "DE004": 1.4166666666666665,
+        "ISS_OX_AOP2020": 45.74999999999999,
+        "ISS_SA_HALOMPNN": 19.5,
+        "MX001": 23.5,
+        "OX005": 33.5
+      },
+      "source_fractional_hhi": 0.14285652918858924,
+      "genera": 124,
+      "pfam_ids": 206,
+      "coarse_combinations": {
+        "original": 2450,
+        "gao|original": 517,
+        "new": 3540,
+        "gao|new": 116,
+        "gao": 825,
+        "new|original": 412,
+        "gao|new|original": 119
+      },
+      "length": {
+        "min": 51,
+        "max": 1024,
+        "mean": 343.93006642436393,
+        "median": 292
+      }
+    },
+    "added": {
+      "rows": 2021,
+      "positive_counts": {
+        "cold": 756,
+        "desiccation": 3,
+        "oxidative": 125,
+        "perchlorate": 17,
+        "radiation": 864,
+        "salt": 409
+      },
+      "unique_ID50": 2021,
+      "scientific_source_ids": 14,
+      "source_ids": [
+        "DE001",
+        "DE004",
+        "ISS_CO_AAC",
+        "ISS_CO_ESMPSYPRED",
+        "ISS_OX_AOP2020",
+        "ISS_RD_DNAREPAIR2009",
+        "ISS_SA_HALOCLASS",
+        "ISS_SA_HALOMPNN",
+        "ISS_SA_HPCLAS",
+        "MX001",
+        "OX002",
+        "PE002",
+        "RA006",
+        "SA006"
+      ],
+      "unknown_source_rows": 412,
+      "source_fractional_counts": {
+        "RA006": 402.0,
+        "ISS_RD_DNAREPAIR2009": 386.66666666666663,
+        "ISS_CO_ESMPSYPRED": 226.83333333333337,
+        "ISS_SA_HPCLAS": 309.0,
+        "ISS_SA_HALOCLASS": 37.166666666666664,
+        "MX001": 5.666666666666667,
+        "ISS_CO_AAC": 84.66666666666666,
+        "ISS_SA_HALOMPNN": 33.5,
+        "ISS_OX_AOP2020": 107.0,
+        "PE002": 11.0,
+        "SA006": 3.0,
+        "DE004": 1.0,
+        "OX002": 1.0,
+        "DE001": 0.5
+      },
+      "source_fractional_hhi": 0.18515137964583497,
+      "genera": 107,
+      "pfam_ids": 18,
+      "coarse_combinations": {
+        "new": 415,
+        "original": 430,
+        "gao|original": 408,
+        "gao": 751,
+        "gao|new|original": 16,
+        "gao|new": 1
+      },
+      "length": {
+        "min": 51,
+        "max": 1022,
+        "mean": 370.57050964868876,
+        "median": 287
+      }
+    },
+    "after": {
+      "rows": 10000,
+      "positive_counts": {
+        "cold": 2006,
+        "desiccation": 2007,
+        "oxidative": 2007,
+        "perchlorate": 2003,
+        "radiation": 2006,
+        "salt": 2006
+      },
+      "unique_ID50": 10000,
+      "scientific_source_ids": 17,
+      "source_ids": [
+        "CO001",
+        "DE001",
+        "DE003",
+        "DE004",
+        "ISS_CO_AAC",
+        "ISS_CO_ESMPSYPRED",
+        "ISS_OX_AOP2020",
+        "ISS_RD_DNAREPAIR2009",
+        "ISS_SA_HALOCLASS",
+        "ISS_SA_HALOMPNN",
+        "ISS_SA_HPCLAS",
+        "MX001",
+        "OX002",
+        "OX005",
+        "PE002",
+        "RA006",
+        "SA006"
+      ],
+      "unknown_source_rows": 2850,
+      "source_fractional_counts": {
+        "ISS_SA_HPCLAS": 577.3333333333334,
+        "DE001": 643.8333333333334,
+        "OX002": 764.8333333333339,
+        "RA006": 705.5,
+        "PE002": 1625.0,
+        "ISS_CO_ESMPSYPRED": 346.16666666666663,
+        "DE003": 365.0,
+        "SA006": 310.0,
+        "CO001": 48.5,
+        "ISS_SA_HALOCLASS": 393.33333333333314,
+        "ISS_RD_DNAREPAIR2009": 854.4166666666658,
+        "ISS_CO_AAC": 245.25,
+        "DE004": 2.4166666666666665,
+        "ISS_OX_AOP2020": 152.75,
+        "ISS_SA_HALOMPNN": 53.0,
+        "MX001": 29.166666666666654,
+        "OX005": 33.5
+      },
+      "source_fractional_hhi": 0.11336839725930634,
+      "genera": 156,
+      "pfam_ids": 220,
+      "coarse_combinations": {
+        "original": 2880,
+        "gao|original": 925,
+        "new": 3955,
+        "gao|new": 117,
+        "gao": 1576,
+        "new|original": 412,
+        "gao|new|original": 135
+      },
+      "length": {
+        "min": 51,
+        "max": 1024,
+        "mean": 349.3141,
+        "median": 290.5
+      }
+    },
+    "eligible_pool": {
+      "rows": 17172,
+      "positive_counts": {
+        "cold": 2754,
+        "desiccation": 4510,
+        "oxidative": 4501,
+        "perchlorate": 17,
+        "radiation": 2958,
+        "salt": 5637
+      },
+      "unique_ID50": 17172,
+      "scientific_source_ids": 17,
+      "source_ids": [
+        "DE001",
+        "DE003",
+        "DE004",
+        "ISS_CO_AAC",
+        "ISS_CO_ESMPSYPRED",
+        "ISS_OX_AOP2020",
+        "ISS_RD_DNAREPAIR2009",
+        "ISS_SA_HALOCLASS",
+        "ISS_SA_HALOMPNN",
+        "ISS_SA_HPCLAS",
+        "MX001",
+        "OX002",
+        "OX005",
+        "PE002",
+        "RA001",
+        "RA006",
+        "SA006"
+      ],
+      "unknown_source_rows": 6208,
+      "source_fractional_counts": {
+        "DE001": 845.500000000009,
+        "ISS_RD_DNAREPAIR2009": 2232.1666666666547,
+        "OX002": 1815.333333333312,
+        "RA006": 403.0,
+        "ISS_SA_HPCLAS": 987.0,
+        "ISS_SA_HALOCLASS": 1318.6666666666667,
+        "SA006": 643.0,
+        "ISS_CO_ESMPSYPRED": 263.83333333333337,
+        "MX001": 95.66666666666664,
+        "DE003": 1863.0,
+        "ISS_CO_AAC": 87.66666666666666,
+        "ISS_SA_HALOMPNN": 77.0,
+        "ISS_OX_AOP2020": 111.66666666666667,
+        "OX005": 207.0,
+        "PE002": 11.0,
+        "RA001": 1.5,
+        "DE004": 1.0
+      },
+      "source_fractional_hhi": 0.13227236972126016,
+      "genera": 115,
+      "pfam_ids": 857,
+      "coarse_combinations": {
+        "original": 6240,
+        "gao|new": 680,
+        "new": 5108,
+        "gao": 3379,
+        "gao|original": 1257,
+        "new|original": 74,
+        "gao|new|original": 434
+      },
+      "length": {
+        "min": 51,
+        "max": 1024,
+        "mean": 330.5766363848125,
+        "median": 275.0
+      }
+    }
+  },
+  "new_source_ids": [],
+  "note": "source identifiers are not necessarily independent studies; metadata labels ignored; no sequence modified; no prediction launched",
+  "input_hashes": {
+    "D:\\火星蛋白\\mpnn数据集\\train_with_esmfold2.csv": "abb2204fa82e9b9d6cd7292ee367e93d52fb432938e0d3e4390bb985c7349b60",
+    "D:\\火星蛋白\\AAA数据集\\第二阶段来源区片的数据。\\MarsLikePro_4万条元数据侧表_v1_20260909.csv": "3fe1744aba3efd422152f4a09e8c747c4a491ce0c96cdb737d7363c97d22e9e6",
+    "D:\\火星蛋白\\AAA数据集\\AAAA并集来源0_v3_20260910\\train.csv": "eca945639360612c09b39bfcbd3c9ebe58ef5752c5247cdc66b34189c09c17c4",
+    "D:\\火星蛋白\\AAA数据集\\AAAA并集来源0_v3_20260910\\validation.csv": "4365aea244ec2167414e5fc7cb35139f62191eb788d2261fcf1900ec50c84367",
+    "D:\\火星蛋白\\AAA数据集\\AAAA并集来源0_v3_20260910\\test.csv": "4209142c39017ad0980dc1266355d17b11d1884c4c56bbcc9f50119d565c6c1a"
+  },
+  "output_hashes": {
+    "待预测_2021条.csv": "0e8e3ef8df8e8a1edc4c9fc6e6e9d4f4bee6ddc8b4da39519bc7315ed7867b80",
+    "正例总表_10000条.csv": "74bb7cb148f290d516ac6b04df90ad48c9ae886c1ab48bb0febfee0a834eeca0",
+    "全部结构台账_12021条.csv": "47f19f35e0c6780151d1cf7961e1b80a602989bfd7d88b0db886d27d63ba28f5"
+  },
+  "source_count_unit": "source IDs with fractional allocation for overlapping IDs; not endpoint or study count",
+  "replay": "fresh output directory required; fixed seed and deterministic sort"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "method": "ProtT5_Frozen_BCE",
+    "hashes_verified": {
+      "train.csv": "eca945639360612c09b39bfcbd3c9ebe58ef5752c5247cdc66b34189c09c17c4",
+      "validation.csv": "4365aea244ec2167414e5fc7cb35139f62191eb788d2261fcf1900ec50c84367"
+    },
+    "validation_ids": 2000,
+    "known_positions": 2525,
+    "unknown_excluded": 9475,
+    "best_epoch": 4,
+    "macro_ap": 0.9507003317256375,
+    "metrics_recomputed": true,
+    "test_evaluated": false
+  },
+  {
+    "method": "ProtT5_Frozen_MaskedBCE",
+    "hashes_verified": {
+      "train.csv": "eca945639360612c09b39bfcbd3c9ebe58ef5752c5247cdc66b34189c09c17c4",
+      "validation.csv": "4365aea244ec2167414e5fc7cb35139f62191eb788d2261fcf1900ec50c84367"
+    },
+    "validation_ids": 2000,
+    "known_positions": 2525,
+    "unknown_excluded": 9475,
+    "best_epoch": 5,
+    "macro_ap": 0.9741499758046438,
+    "metrics_recomputed": true,
+    "test_evaluated": false
+  }
+]

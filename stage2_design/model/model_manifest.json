@@ -1,0 +1,15 @@
+{
+  "adapter_name": "Marslike-MPNN joint LoRA",
+  "adapter_file": "best_joint_lora.pt",
+  "adapter_sha256": "d5c161e53b417bd88f373e2f0fcc31d864768bf6169fe021513f60605dea37be",
+  "adapter_bytes": 123610,
+  "base_model": "ProteinMPNN v_48_020",
+  "base_checkpoint_redistributed": false,
+  "base_checkpoint_sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+  "lora_rank": 8,
+  "lora_alpha": 16.0,
+  "lora_dropout": 0.05,
+  "target_modules": "decoder_layers.[0-2].W1/W2/W3 and W_out",
+  "inference_temperature": 0.1,
+  "matched_generation_seeds": [42, 43, 44]
+}

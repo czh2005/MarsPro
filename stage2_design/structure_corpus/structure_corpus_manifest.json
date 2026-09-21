@@ -1,0 +1,8 @@
+{
+  "rows": 10000,
+  "unique_sequence_ids": 10000,
+  "all_have_positive_label": true,
+  "source_sha256": "74bb7cb148f290d516ac6b04df90ad48c9ae886c1ab48bb0febfee0a834eeca0",
+  "output_sha256": "49a62ef5ab4cb68e57e0bd293a637ccb9a12d4087e75440338d49e915962d041",
+  "pdb_files_in_repository": 0
+}

@@ -1,0 +1,74 @@
+{
+  "status": "running",
+  "training_rows": 36000,
+  "training_internal_role": "full_train",
+  "mask_audit": {
+    "strategy": "random_matched",
+    "seed": 43,
+    "artificial_missing_fraction": null,
+    "original_known_positions_per_task": [
+      6453,
+      7520,
+      8668,
+      2244,
+      10259,
+      10206
+    ],
+    "effective_positions_per_task": [
+      6453,
+      7520,
+      8668,
+      2244,
+      10259,
+      10206
+    ],
+    "originally_known_retained_per_task": [
+      1137,
+      1526,
+      2047,
+      143,
+      2902,
+      2861
+    ],
+    "originally_unknown_selected_as_zero_control_per_task": [
+      5316,
+      5994,
+      6621,
+      2101,
+      7357,
+      7345
+    ],
+    "preserves_only_verified_targets": false
+  },
+  "known_positions_per_task": {
+    "cold": 6453,
+    "desiccation": 7520,
+    "oxidative": 8668,
+    "perchlorate": 2244,
+    "radiation": 10259,
+    "salt": 10206
+  },
+  "positive_positions_per_task": {
+    "cold": 710,
+    "desiccation": 1333,
+    "oxidative": 1506,
+    "perchlorate": 126,
+    "radiation": 1176,
+    "salt": 2100
+  },
+  "negative_positions_per_task": {
+    "cold": 5743,
+    "desiccation": 6187,
+    "oxidative": 7162,
+    "perchlorate": 2118,
+    "radiation": 9083,
+    "salt": 8106
+  },
+  "epochs": 5,
+  "updates_per_epoch": 2250,
+  "total_updates_planned": 11250,
+  "world_size": 2,
+  "trainable_parameters": 2232070,
+  "total_parameters": 1210373894,
+  "test_evaluated": false
+}

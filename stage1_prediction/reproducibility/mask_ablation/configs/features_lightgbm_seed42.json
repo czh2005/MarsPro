@@ -1,0 +1,22 @@
+{
+  "protocol_version": "traditional_sequence_features_v1",
+  "root": "/sddn/yyf_work/chenzhenghang/mars-tool",
+  "run_name": "mask_causal_traditional_20260912_141236_features_lightgbm_seed42",
+  "estimator": "lightgbm",
+  "seed": 42,
+  "cksaagp_max_gap": 5,
+  "n_estimators": 400,
+  "learning_rate": 0.05,
+  "num_leaves": 31,
+  "n_jobs": 12,
+  "features": [
+    "length",
+    "AAC",
+    "DPC",
+    "CKSAAGP_gap0_to_5",
+    "physicochemical_fractions"
+  ],
+  "unknown_training_policy": "exclude_from_each_task_loss",
+  "evaluation_policy": "validation_known_labels_only",
+  "test_evaluated": false
+}
